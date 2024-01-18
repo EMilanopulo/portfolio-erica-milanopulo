@@ -1,0 +1,54 @@
+<div ngClass="navContainer">
+  <app-menu></app-menu>
+</div>
+<div ngClass="container">
+  <div ngClass="titleWrapper">
+    <h2 ngClass="title">{{ title }}</h2>
+    <div
+      [ngClass]="{
+        presentDiv: title === 'PRESENTAZIONE',
+        tecDiv: title === 'TECNOLOGIE',
+        espDiv: title === 'ESPERIENZE',
+        contactDiv: title === 'CONTATTI'
+      }"
+    ></div>
+  </div>
+
+  <!-- Sezione Presentazione -->
+  <div
+    *ngIf="title === 'PRESENTAZIONE'"
+    ngClass="bodyWrapper animate__animated animate__fadeInLeft"
+  >
+    <p ngClass="textContent">{{ textContent }}</p>
+  </div>
+
+  <!-- Sezione pagina Tecnologie -->
+  <div *ngIf="title === 'TECNOLOGIE'" ngClass="bodyWrapper flexWrapper">
+    <div>
+      <ul ngClass="animate__animated animate__fadeInLeft">
+        <li ngClass="textContent">{{ firstText }}</li>
+        <li ngClass="textContent">{{ secondText }}</li>
+        <li ngClass="textContent">{{ thirdText }}</li>
+        <li ngClass="textContent">{{ fourthText }}</li>
+        <li ngClass="textContent">{{ fifthText }}</li>
+        <li ngClass="textContent">{{ sixthText }}</li>
+        <li ngClass="textContent">{{ seventhText }}</li>
+        <li ngClass="textContent">{{ eightText }}</li>
+      </ul>
+    </div>
+    <div>
+      <ul ngClass="animate__animated animate__fadeInRight">
+        <li ngClass="textContent">Ionic</li>
+        <li ngClass="textContent">Bootstrap</li>
+        <li ngClass="textContent">Tailwind CSS</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sezione Esperienze -->
+  <div *ngIf="title === 'ESPERIENZE'">
+  </div>
+
+  <!-- Sezione Contatti -->
+  <div *ngIf="title === 'CONTATTI'"></div>
+</div>

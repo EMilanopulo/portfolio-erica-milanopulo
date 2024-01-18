@@ -1,0 +1,69 @@
+.rowsContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+.bottomRowsContainer {
+  position: absolute;
+  bottom: -110px;
+  height: 100vh;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+.TopColoredRow {
+  height: 100vh;
+  transform: translateY(-20vh) rotate(35deg);
+  width: 13px;
+  animation-name: rowTransition;
+  animation-duration: 3s;
+}
+
+.bottomColoredRow{
+  margin-bottom: auto;
+  height: 100vh;
+  transform: translateY(0vh) rotate(35deg);
+  width: 13px;
+  animation-name: bottomRowTransition;
+  animation-duration: 3s;
+}
+
+.row1 {
+  background-color: #fcff33;
+}
+
+.row2 {
+  background-color: #33e0ff;
+}
+
+.row3 {
+  background-color:#ff33d3;
+}
+
+//ANIMAZIONI
+@keyframes rowTransition {
+  0% {
+    height: 0vh;
+    transform: translateY(0);
+  }
+  100% {
+    height: 100vh;
+    transform: translateY(-20vh) rotate(35deg);
+  }
+}
+
+@keyframes bottomRowTransition {
+  0% {
+    height: 0vh;
+    transform: translateY(80vh);
+  }
+  100% {
+    height: 100vh;
+    transform: translateY(0vh) rotate(35deg);
+  }
+}
+

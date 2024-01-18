@@ -1,0 +1,46 @@
+.navbar {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 35px;
+  margin-right: 25px;
+  margin-top: 20px;
+}
+
+.textWrapper {
+  height: 23px;
+}
+
+.gradientText {
+  background: linear-gradient(to right, #ff33d3, #fcff33, #33e0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.emptyDiv {
+  margin-top: 2px;
+  height: 2px;
+  background: linear-gradient(to right, #ff33d3, #fcff33, #33e0ff);
+  animation-name: divAnimation;
+  animation-duration: 2s;
+  width: 100%;
+}
+
+.activeLink {
+  margin-top: 2px;
+  height: 2px;
+  background: linear-gradient(to right, #ff33d3, #fcff33, #33e0ff);
+  width: 100%;
+}
+
+//ANIMAZIONI
+@keyframes divAnimation {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}

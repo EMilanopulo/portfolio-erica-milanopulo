@@ -1,0 +1,98 @@
+<div ngClass="navbar">
+  <div
+    (mouseenter)="onMouseEnter('home')"
+    (mouseleave)="onMouseLeave()"
+    (click)="navigateToPage('home')"
+    [ngClass]="{
+      gradientText: coloredText === 'home' || currentRoute === '/',
+      textWrapper: true
+    }"
+  >
+    Home
+    <div
+      *ngIf="coloredText === 'home' || currentRoute === '/'"
+      [ngClass]="{
+        emptyDiv: coloredText === 'home',
+        activeLink: currentRoute === '/'
+      }"
+    ></div>
+  </div>
+  <div
+    (mouseenter)="onMouseEnter('presentazione')"
+    (mouseleave)="onMouseLeave()"
+    (click)="navigateToPage('presentazione')"
+    [ngClass]="{
+      gradientText:
+        coloredText === 'presentazione' || currentRoute === '/presentazione',
+      textWrapper: true
+    }"
+  >
+    Presentazione
+    <div
+      *ngIf="
+        coloredText === 'presentazione' || currentRoute === '/presentazione'
+      "
+      [ngClass]="{
+        emptyDiv: coloredText === 'presentazione',
+        activeLink: currentRoute === '/presentazione'
+      }"
+    ></div>
+  </div>
+  <div
+    (mouseenter)="onMouseEnter('tecnologie')"
+    (mouseleave)="onMouseLeave()"
+    (click)="navigateToPage('tecnologie')"
+    [ngClass]="{
+      gradientText:
+        coloredText === 'tecnologie' || currentRoute === '/tecnologie',
+      textWrapper: true
+    }"
+  >
+    Tecnologie
+    <div
+      *ngIf="coloredText === 'tecnologie' || currentRoute === '/tecnologie'"
+      [ngClass]="{
+        emptyDiv: coloredText === 'tecnologie',
+        activeLink: currentRoute === '/tecnologie'
+      }"
+    ></div>
+  </div>
+  <div
+    (mouseenter)="onMouseEnter('esperienze')"
+    (mouseleave)="onMouseLeave()"
+    (click)="navigateToPage('esperienze')"
+    [ngClass]="{
+      gradientText:
+        coloredText === 'esperienze' || currentRoute === '/esperienze',
+      textWrapper: true
+    }"
+  >
+    Esperienze
+    <div
+      *ngIf="coloredText === 'esperienze' || currentRoute === '/esperienze'"
+      [ngClass]="{
+        emptyDiv: coloredText === 'esperienze',
+        activeLink: currentRoute === '/esperienze'
+      }"
+    ></div>
+  </div>
+  <div
+    (mouseenter)="onMouseEnter('contatti')"
+    (mouseleave)="onMouseLeave()"
+    (click)="navigateToPage('contatti')"
+    [ngClass]="{
+      gradientText:
+        coloredText === 'contatti' || currentRoute === '/contatti',
+      textWrapper: true
+    }"
+  >
+    Contatti
+    <div
+      *ngIf="coloredText === 'contatti' || currentRoute === '/contatti'"
+      [ngClass]="{
+        emptyDiv: coloredText === 'contatti',
+        activeLink: currentRoute === '/contatti'
+      }"
+    ></div>
+  </div>
+</div>

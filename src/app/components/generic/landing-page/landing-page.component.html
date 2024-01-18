@@ -1,0 +1,26 @@
+<div ngClass="landingPageWrapper" #mainContent>
+  <app-menu></app-menu>
+  <div>
+    <div *ngIf="startColoring">
+      <app-colored-rows [isUpperPart]="true"></app-colored-rows>
+    </div>
+    <div ngClass="landingContainer">
+      <div ngClass="animate__animated animate__fadeInLeft">
+        <div ngClass="title">Erica Milanopulo</div>
+        <div ngClass="subtitle">Front-end developer</div>
+        <div ngClass="underlinedSubtitle"></div>
+      </div>
+      <div ngClass="pictureContainer animate__animated animate__fadeInRight">
+        <div ngClass="pictureContainerInner"></div>
+        <img
+          src="./../../../../assets/images/IMG_2842.jpg"
+          alt="portrait image"
+          ngClass="image"
+        />
+      </div>
+    </div>
+  </div>
+  <div *ngIf="startColoring">
+    <app-colored-rows [isUpperPart]="false"></app-colored-rows>
+  </div>
+</div>

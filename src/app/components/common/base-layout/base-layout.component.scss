@@ -1,0 +1,95 @@
+.navContainer{
+  margin-top: 28px;
+}
+
+.presentDiv{
+  height: 2px;
+  animation-name: underlineAnimation;
+  animation-duration: 2s;
+  background-color: #fff;
+  width: 29%;
+  margin-left: 4px;
+}
+
+.tecDiv{
+  height: 2px;
+  animation-name: techAnimation;
+  animation-duration: 2s;
+  background-color: #fff;
+  width: 22.3%;
+  margin-left: 4px;
+}
+
+.espDiv{
+  height: 2px;
+  animation-name: espAnimation;
+  animation-duration: 2s;
+  background-color: #fff;
+  width: 22.3%;
+  margin-left: 4px;
+}
+
+.contactDiv{
+  height: 2px;
+  animation-name: contactAnimation;
+  animation-duration: 2s;
+  background-color: #fff;
+  width: 17.6%;
+  margin-left: 4px;
+}
+
+.titleWrapper{
+  margin-bottom: 55px;
+}
+
+.flexWrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 55%;
+}
+
+.title{
+  margin: 0
+}
+
+.textContent{
+  line-height: 2.5;
+  font-size: 20px;
+}
+
+//ANIMAZIONI
+@keyframes underlineAnimation {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 29%;
+  }
+}
+
+@keyframes techAnimation {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 22.3%;
+  }
+}
+
+@keyframes espAnimation {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 22.3%;
+  }
+}
+
+@keyframes contactAnimation {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 17.6%;
+  }
+}
