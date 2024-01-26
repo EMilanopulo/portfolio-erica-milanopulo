@@ -1,8 +1,8 @@
-.navContainer{
+.navContainer {
   margin-top: 28px;
 }
 
-.presentDiv{
+.presentDiv {
   height: 2px;
   animation-name: underlineAnimation;
   animation-duration: 2s;
@@ -11,7 +11,7 @@
   margin-left: 4px;
 }
 
-.tecDiv{
+.tecDiv {
   height: 2px;
   animation-name: techAnimation;
   animation-duration: 2s;
@@ -20,7 +20,7 @@
   margin-left: 4px;
 }
 
-.espDiv{
+.espDiv {
   height: 2px;
   animation-name: espAnimation;
   animation-duration: 2s;
@@ -29,7 +29,7 @@
   margin-left: 4px;
 }
 
-.contactDiv{
+.contactDiv {
   height: 2px;
   animation-name: contactAnimation;
   animation-duration: 2s;
@@ -38,23 +38,72 @@
   margin-left: 4px;
 }
 
-.titleWrapper{
+.titleWrapper {
   margin-bottom: 55px;
 }
 
-.flexWrapper{
+.flexWrapper {
   display: flex;
   flex-direction: row;
   gap: 55%;
 }
 
-.title{
-  margin: 0
+.title {
+  margin: 0;
 }
 
-.textContent{
+.textContent {
   line-height: 2.5;
   font-size: 20px;
+}
+
+//PAGINA ESPERIENZE
+.esp-title {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.esp-subtitle {
+  color: #ffffff96;
+  font-size: 18px;
+}
+
+.esp-description {
+  font-size: 20px;
+}
+
+.esp-technologies-title {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.esp-technologies-list {
+  font-size: 18px;
+}
+
+.esp-wrapper {
+  margin-bottom: 40px;
+}
+
+.esp-flex-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.esp-technologies-list {
+  margin-right: 8px;
+}
+
+.colored-line-wrapper {
+  margin-right: 20px;
+}
+
+.colored-line {
+  height: 90%;
+  width: 4px;
+  content: " ";
+  margin-top: 21px;
 }
 
 //ANIMAZIONI

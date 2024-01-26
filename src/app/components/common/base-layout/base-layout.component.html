@@ -47,6 +47,24 @@
 
   <!-- Sezione Esperienze -->
   <div *ngIf="title === 'ESPERIENZE'">
+    <div *ngFor="let esperienza of esperienzeObj; let i = index;">
+      <div class="esp-flex-wrapper esp-wrapper">
+        <div class="colored-line-wrapper">
+          <div class="colored-line" [style.background-color]="coloriLinea[i % coloriLinea.length]"></div>
+        </div>
+        <div>
+          <h2 class="esp-title">{{ esperienza.title }}</h2>
+          <h4 class="esp-subtitle">{{ esperienza.periodo }}</h4>
+          <p class="esp-description">{{ esperienza.description }}</p>
+          <div class="esp-flex-wrapper">
+            <p class="esp-technologies-title">Tecnologie usate:</p>
+            <div *ngFor="let tecnologia of esperienza.technologies; let last = last;">
+              <p class="esp-technologies-list">{{ tecnologia }}{{ !last ? ',' : '' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Sezione Contatti -->

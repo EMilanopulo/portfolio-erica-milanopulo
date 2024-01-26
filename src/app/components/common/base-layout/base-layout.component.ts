@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { EsperienzeModel } from 'src/app/models/esperienze-model';
 
 @Component({
   selector: 'app-base-layout',
@@ -19,6 +20,11 @@ export class BaseLayoutComponent implements OnInit {
   @Input() sixthText: string = "";
   @Input() seventhText: string = "";
   @Input() eightText: string = "";
+
+  //Experiences page
+  @Input() esperienzeObj: EsperienzeModel[] = [];
+
+  coloriLinea: string[] = ['#fcff33', '#33e0ff', '#ff33d3'];
 
   constructor() { }
 
