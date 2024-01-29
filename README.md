@@ -7,8 +7,6 @@ Questo è un sito di presentazione personale realizzato mediante l'uso di divers
 
 E' stata integrata inoltre la libreria Animate.css.
 
-Lo sviluppo è iniziato a partire dalla vista Web ma si prevede in futuro un adattamento a viste di dimensioni più ridotte.
-
 # Sezioni
 L'applicativo si divide in 5 sezioni fondamentali:
  - Home
