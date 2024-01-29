@@ -2,50 +2,33 @@
   margin-top: 28px;
 }
 
-.presentDiv {
+.contact-container {
+  height: 98vh;
+}
+
+.animationDiv {
   height: 2px;
   animation-name: underlineAnimation;
   animation-duration: 2s;
   background-color: #fff;
-  width: 29%;
-  margin-left: 4px;
-}
-
-.tecDiv {
-  height: 2px;
-  animation-name: techAnimation;
-  animation-duration: 2s;
-  background-color: #fff;
-  width: 22.3%;
-  margin-left: 4px;
-}
-
-.espDiv {
-  height: 2px;
-  animation-name: espAnimation;
-  animation-duration: 2s;
-  background-color: #fff;
-  width: 22.3%;
-  margin-left: 4px;
-}
-
-.contactDiv {
-  height: 2px;
-  animation-name: contactAnimation;
-  animation-duration: 2s;
-  background-color: #fff;
-  width: 17.6%;
+  width: 100%;
   margin-left: 4px;
 }
 
 .titleWrapper {
   margin-bottom: 55px;
+  width: fit-content;
 }
 
 .flexWrapper {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  gap: 55%;
+  gap: 5%;
+}
+
+.li-element {
+  flex: 1 0 47%;
 }
 
 .title {
@@ -58,6 +41,13 @@
 }
 
 //PAGINA ESPERIENZE
+.esperiences-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .esp-title {
   font-weight: bold;
   font-size: 30px;
@@ -106,13 +96,36 @@
   margin-top: 21px;
 }
 
+//PAGINA CONTATTI
+.flex-container {
+  margin-top: 45px;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8%;
+}
+
+.contact-wrapper {
+  margin-top: 5%;
+}
+
+.contact-me {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cv-style {
+  text-align: center;
+}
+
 //ANIMAZIONI
 @keyframes underlineAnimation {
   0% {
     width: 0px;
   }
   100% {
-    width: 29%;
+    width: 100%;
   }
 }
 
@@ -121,7 +134,7 @@
     width: 0px;
   }
   100% {
-    width: 22.3%;
+    width: 100%;
   }
 }
 
@@ -130,7 +143,7 @@
     width: 0px;
   }
   100% {
-    width: 22.3%;
+    width: 100%;
   }
 }
 
@@ -139,6 +152,47 @@
     width: 0px;
   }
   100% {
-    width: 17.6%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .flexWrapper {
+    gap: 35%;
+  }
+
+  .esp-title {
+    font-size: 25px;
+  }
+
+  .esp-subtitle,
+  .esp-technologies-list {
+    font-size: 14px;
+  }
+
+  .esp-description {
+    font-size: 16px;
+  }
+
+  .esp-technologies-title {
+    margin-right: 7px;
+    font-size: 14px;
+  }
+
+  .colored-line {
+    height: 94%;
+  }
+
+  .contact-me {
+    font-size: 18px;
+  }
+
+  .flex-container {
+    margin-bottom: 22%;
+    margin-top: 24px;
+  }
+
+  .contact-wrapper {
+    margin-top: 21%;
   }
 }

@@ -81,8 +81,7 @@
     (mouseleave)="onMouseLeave()"
     (click)="navigateToPage('contatti')"
     [ngClass]="{
-      gradientText:
-        coloredText === 'contatti' || currentRoute === '/contatti',
+      gradientText: coloredText === 'contatti' || currentRoute === '/contatti',
       textWrapper: true
     }"
   >
@@ -94,5 +93,151 @@
         activeLink: currentRoute === '/contatti'
       }"
     ></div>
+  </div>
+</div>
+
+<div class="nav-mobile">
+  <div
+    [ngClass]="{
+      'svg-container': currentRoute === '/',
+      'svg-pages-container': currentRoute !== '/'
+    }"
+    (click)="manageMenu(true)"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      [attr.width]="isMobile ? '30' : '35'"
+      [attr.height]="isMobile ? '30' : '35'"
+      fill="currentColor"
+      class="bi bi-list"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+      />
+    </svg>
+  </div>
+
+  <div
+    [ngClass]="{
+      'mobile-menu-wrapper': currentRoute === '/',
+      'mobile-wrapper': currentRoute !== '/'
+    }"
+    *ngIf="isMobileMenuOpen"
+  >
+    <div class="close-btn" (click)="manageMenu(false)">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        fill="currentColor"
+        [ngClass]="{ 'bi bi-x': true, 'animation-btn': isMobileMenuOpen }"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+        />
+      </svg>
+    </div>
+    <div class="grid-menu">
+      <div
+        (mouseenter)="onMouseEnter('home')"
+        (mouseleave)="onMouseLeave()"
+        (click)="navigateToPage('home')"
+        [ngClass]="{
+          gradientText: coloredText === 'home' || currentRoute === '/',
+          textWrapper: true
+        }"
+      >
+        Home
+        <div
+          *ngIf="coloredText === 'home' || currentRoute === '/'"
+          [ngClass]="{
+            emptyDiv: coloredText === 'home',
+            activeLink: currentRoute === '/'
+          }"
+        ></div>
+      </div>
+      <div
+        (mouseenter)="onMouseEnter('presentazione')"
+        (mouseleave)="onMouseLeave()"
+        (click)="navigateToPage('presentazione')"
+        [ngClass]="{
+          gradientText:
+            coloredText === 'presentazione' ||
+            currentRoute === '/presentazione',
+          textWrapper: true
+        }"
+      >
+        Presentazione
+        <div
+          *ngIf="
+            coloredText === 'presentazione' || currentRoute === '/presentazione'
+          "
+          [ngClass]="{
+            emptyDiv: coloredText === 'presentazione',
+            activeLink: currentRoute === '/presentazione'
+          }"
+        ></div>
+      </div>
+      <div
+        (mouseenter)="onMouseEnter('tecnologie')"
+        (mouseleave)="onMouseLeave()"
+        (click)="navigateToPage('tecnologie')"
+        [ngClass]="{
+          gradientText:
+            coloredText === 'tecnologie' || currentRoute === '/tecnologie',
+          textWrapper: true
+        }"
+      >
+        Tecnologie
+        <div
+          *ngIf="coloredText === 'tecnologie' || currentRoute === '/tecnologie'"
+          [ngClass]="{
+            emptyDiv: coloredText === 'tecnologie',
+            activeLink: currentRoute === '/tecnologie'
+          }"
+        ></div>
+      </div>
+      <div
+        (mouseenter)="onMouseEnter('esperienze')"
+        (mouseleave)="onMouseLeave()"
+        (click)="navigateToPage('esperienze')"
+        [ngClass]="{
+          gradientText:
+            coloredText === 'esperienze' || currentRoute === '/esperienze',
+          textWrapper: true
+        }"
+      >
+        Esperienze
+        <div
+          *ngIf="coloredText === 'esperienze' || currentRoute === '/esperienze'"
+          [ngClass]="{
+            emptyDiv: coloredText === 'esperienze',
+            activeLink: currentRoute === '/esperienze'
+          }"
+        ></div>
+      </div>
+      <div
+        (mouseenter)="onMouseEnter('contatti')"
+        (mouseleave)="onMouseLeave()"
+        (click)="navigateToPage('contatti')"
+        [ngClass]="{
+          gradientText:
+            coloredText === 'contatti' || currentRoute === '/contatti',
+          textWrapper: true
+        }"
+      >
+        Contatti
+        <div
+          *ngIf="coloredText === 'contatti' || currentRoute === '/contatti'"
+          [ngClass]="{
+            emptyDiv: coloredText === 'contatti',
+            activeLink: currentRoute === '/contatti'
+          }"
+        ></div>
+      </div>
+    </div>
   </div>
 </div>

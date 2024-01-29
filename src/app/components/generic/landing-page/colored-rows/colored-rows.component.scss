@@ -5,6 +5,10 @@
   gap: 35px;
 }
 
+.mobile-colored-rows {
+  display: none;
+}
+
 .bottomRowsContainer {
   position: absolute;
   bottom: -110px;
@@ -44,6 +48,10 @@
   background-color:#ff33d3;
 }
 
+.row4 {
+  background-color: rgba(132, 245, 39, 0.8);
+}
+
 //ANIMAZIONI
 @keyframes rowTransition {
   0% {
@@ -66,4 +74,91 @@
     transform: translateY(0vh) rotate(35deg);
   }
 }
+
+@keyframes mobileRow1Transition {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+
+@keyframes mobileRow2Transition {
+  0% {
+    width: 0vh;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes mobileRow3Transition {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+
+@keyframes mobileRow4Transition {
+  0% {
+    width: 0vh;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: 1120px) {
+  .rowsContainer, .bottomRowsContainer {
+    display: none;
+  }
+
+  .mobile-colored-rows {
+    display: block;
+    content: ' ';
+  }
+
+  .row1 {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 8px;
+    animation-name: mobileRow1Transition;
+    animation-duration: 3s;
+  }
+
+  .row2 {
+    position: absolute;
+    bottom: 0;
+    height: 8px;
+    width: 100%;
+    animation-name: mobileRow2Transition;
+    animation-duration: 3s;
+  }
+
+  .row3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 8px;
+    animation-name: mobileRow3Transition;
+    animation-duration: 3s;
+  }
+
+  .row4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 8px;
+    width: 100%;
+    animation-name: mobileRow4Transition;
+    animation-duration: 3s;
+  }
+}
+
 

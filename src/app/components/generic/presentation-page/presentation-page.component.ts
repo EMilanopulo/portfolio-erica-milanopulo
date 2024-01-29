@@ -17,11 +17,11 @@ export class PresentationPageComponent implements OnInit {
   L\'ultimo anno di università ho poi scoperto la programmazione e ne sono rimasta ammagliata. Ho capito che\
   avrei potuto passare ore a programmare senza che questo mi pesasse e sono quindi giunta alla conclusione\
   che avrei dovuto trasformare questa mia passione in un possibile lavoro.\
-  Ho quindi deciso di intraprendere un nuovo percorso con Epicode che mi ha portata, a Maggio 2022,\
+  Ho quindi deciso di intraprendere un nuovo percorso con Epicode che mi ha portato, a Maggio 2022,\
   ad essere assunta come frontend developer nella mia attuale Azienda. Durante\
   il mio primo anno di lavoro, oltre ad approfondire le conoscenze già in possesso,\
   ne ho acquisite di nuove grazie l\'uso di tecnologie e framework quali ad esempio,\
-  React, Flutter e Ionic.'
+  Angular, React e Ionic.'
 
   constructor() { }
 

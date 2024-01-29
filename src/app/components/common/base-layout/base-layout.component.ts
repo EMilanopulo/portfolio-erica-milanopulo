@@ -12,19 +12,16 @@ export class BaseLayoutComponent implements OnInit {
   @Input() textContent: string = "";
 
   //Only for Technologies page
-  @Input() firstText: string = "";
-  @Input() secondText: string = "";
-  @Input() thirdText: string = "";
-  @Input() fourthText: string = "";
-  @Input() fifthText: string = "";
-  @Input() sixthText: string = "";
-  @Input() seventhText: string = "";
-  @Input() eightText: string = "";
+  @Input() technologies: string[] = [];
 
   //Experiences page
   @Input() esperienzeObj: EsperienzeModel[] = [];
 
   coloriLinea: string[] = ['#fcff33', '#33e0ff', '#ff33d3'];
+
+  getAnimationClass(index: number): string {
+    return index % 2 === 0 ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight';
+  }
 
   constructor() { }
 

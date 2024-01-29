@@ -37,6 +37,15 @@ export class EsperienzePageComponent implements OnInit {
       freelance, agenzie e gruppi di lavoro, che consente di registrare le attività svolte a consuntivo per il cliente,\
       le ore impiegate o gli importi forfettari concordati e di riversare in fatturazione e generare la fattura in pochi istanti.',
       technologies: ['React']
+    },
+    {
+      title: 'App mobile settore medico',
+      periodo: 'Dicembre 2023 - Gennaio 2023',
+      description: 'Sviluppo di un\'applicazione mobile volta al monitoraggio dell\'utilizzo di allineatori ad uso dentistico.\
+      L\'applicazione è caratterizzata da un form di settaggio iniziale, da un timer che consente di monitorare il raggiungimento\
+      delle 10 ore di utilizzo giornaliere, di un sistema di notifiche locali che avvisano quando indossare l\'allineatore,\
+      quando cambiarlo e quando si sono concluse le 10 ore di utilizzo e di un calendario dal quale verificare i progressi giornalieri',
+      technologies: ['React Native']
     }
   ];
 

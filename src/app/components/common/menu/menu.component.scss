@@ -8,8 +8,14 @@
   margin-top: 20px;
 }
 
+.nav-mobile {
+  display: none;
+}
+
 .textWrapper {
   height: 23px;
+  cursor: pointer;
+  width: fit-content;
 }
 
 .gradientText {
@@ -35,6 +41,16 @@
   width: 100%;
 }
 
+/* Allineamento a sinistra per le prime 3 colonne */
+.grid-menu :nth-child(-n+3) {
+  text-align: left;
+}
+
+/* Allineamento a destra per le ultime 2 colonne */
+.grid-menu :nth-child(n+4) {
+  text-align: right;
+}
+
 //ANIMAZIONI
 @keyframes divAnimation {
   0% {
@@ -42,5 +58,105 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes closeBtnAnimation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1036px) {
+  .navbar {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+    position: relative;
+  }
+
+  .svg-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .svg-pages-container {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .close-btn {
+    padding: 10px 10px 20px 0;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .animation-btn {
+    animation-name: closeBtnAnimation;
+    animation-duration: 3s;
+  }
+
+  .bi-x {
+    float: right;
+  }
+
+  .mobile-menu-wrapper {
+    position: absolute;
+    top: 8px;
+    left: 1.4%;
+    width: 60%;
+    background-color: black;
+    z-index: 22;
+    height: 96.1vh;
+    border-top: 2px solid #ff33d3;
+    border-right: 2px solid #fcff33;
+    border-bottom: 2px solid rgba(132, 245, 39, 0.8);
+    border-left: 2px solid #33e0ff;
+  }
+
+  .mobile-wrapper {
+    position: absolute;
+    top: -27.5px;
+    left: 0px;
+    width: 60%;
+    background-color: black;
+    z-index: 22;
+    height: 99vh;
+    border-top: 2px solid #ff33d3;
+    border-right: 2px solid #fcff33;
+    border-bottom: 2px solid rgba(132, 245, 39, 0.8);
+    border-left: 2px solid #33e0ff;
+  }
+
+  .textWrapper {
+    padding-right: 10px;
+    padding-bottom: 65px;
+    font-size: 15px;
+  }
+
+  .grid-menu {
+    padding: 40px 81px;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .grid-menu {
+    padding: 40px 50px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .grid-menu {
+    padding: 40px 25px;
   }
 }

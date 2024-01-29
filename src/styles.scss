@@ -10,15 +10,66 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'jetBrains', 'arial', sans-serif;
+  font-family: "jetBrains", "arial", sans-serif;
   background-color: black;
   color: #fff;
 }
 
-.container{
-  margin: 100px 80px;
+.container {
+  margin: 88px 80px;
 }
 
-.title{
+.title {
   font-size: 66px;
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 50px;
+  }
+
+  .textContent {
+    font-size: 16px;
+  }
+
+  .container {
+    margin: 116px 53px 60px 53px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .textContent {
+    font-size: 14px;
+  }
+
+  .titleWrapper {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    margin: 116px 4% 60px 6%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .textContent {
+    font-size: 12px;
+  }
+
+  .titleWrapper {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    margin: 116px 4% 60px 6%;
+  }
 }
